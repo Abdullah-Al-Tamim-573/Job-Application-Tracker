@@ -1,0 +1,8 @@
+job-card-title
+job-card-subtitle
+job-card-type-and-salary
+not-applied-job-card-status
+job-card-describtion
+job-card-interview-btn
+job-card-rejected-btn
+job-card-deleate-btn

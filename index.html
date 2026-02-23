@@ -55,12 +55,12 @@
         <!-- card (Interview) 2 -->
         <div id="interview-tracker-card" class="border p-5 rounded-md">
           <h3>Interview</h3>
-          <p class="text-[1.6rem] text-[green] font-medium">0</p>
+          <p class="text-[1.6rem] text-[green] font-medium interview-count-number">0</p>
         </div>
         <!-- card (Rejected) 3 -->
         <div id="rejected-tracker-card" class="border p-5 rounded-md">
           <h3>Rejected</h3>
-          <p class="text-[1.6rem] text-[red] font-medium">0</p>
+          <p class="text-[1.6rem] text-[red] font-medium rejected-count-number">0</p>
         </div>
       </section>
     </header>
@@ -113,12 +113,12 @@
           <!-- card text part -->
           <div id="text-part" class="space-y-5">
             <div>
-              <h3 class="text-[#002c5cFF] text-[18px] font-medium">
+              <h3 class="text-[#002c5cFF] text-[18px] font-medium job-card-title">
                 Mobile First Corp
               </h3>
-              <p class="text-[#64748bFF]">React Native Developer</p>
+              <p class="text-[#64748bFF] job-card-subtitle">React Native Developer</p>
             </div>
-            <p class="flex items-center gap-3 text-[#64748bFF]">
+            <p class="flex items-center gap-3 text-[#64748bFF] job-card-type-and-salary">
               <span class="text-[14px]">Remote</span>
               <span class="text-[14px]">•</span>
               <span class="text-[14px]">Full-time</span>
@@ -127,24 +127,24 @@
             </p>
 
             <div class="">
-              <span class="text-[#002c5cFF] bg-[#eef4ff] font-semibold px-3 py-2 border text-[14px]">
+              <span class="text-[#002c5cFF] bg-[#eef4ff] font-semibold px-3 py-2 border text-[14px] not-applied-job-card-status">
                 Not Applied
               </span>
             </div>
 
-            <p class="text-[14px] text-[#323b49FF]">
+            <p class="text-[14px] text-[#323b49FF] job-card-describtion">
               Build cross-platform mobile applications using React Native. Work
               on products used by millions of users worldwide.
             </p>
 
             <div class="flex gap-2">
               <button
-                class="btn border border-[#10b981FF] font-semibold text-[#10b981FF]"
+                class="btn job-card-interview-btn border border-[#10b981FF] font-semibold text-[#10b981FF]"
               >
                 INTERVIEW
               </button>
               <button
-                class="btn border border-[#ef4444FF] font-semibold text-[#ef4444FF]"
+                class="btn job-card-rejected-btn border REJECTED-btn border-[#ef4444FF] font-semibold text-[#ef4444FF]"
               >
                 REJECTED
               </button>
@@ -153,7 +153,7 @@
 
           <!-- card deleate icon part -->
           <div id="card-deleate-icon-part">
-            <button class="btn">
+            <button class="btn job-card-deleate-btn">
               <i class="fa-solid fa-trash-can"></i>
             </button>
           </div>
@@ -163,12 +163,12 @@
           <!-- card text part -->
           <div id="text-part" class="space-y-5">
             <div>
-              <h3 class="text-[#002c5cFF] text-[18px] font-medium">
+              <h3 class="text-[#002c5cFF] text-[18px] font-medium job-card-title">
                 WebFlow Agency
               </h3>
-              <p class="text-[#64748bFF]">Web Designer & Developer</p>
+              <p class="text-[#64748bFF] job-card-subtitle">Web Designer & Developer</p>
             </div>
-            <p class="flex items-center gap-3 text-[#64748bFF]">
+            <p class="flex items-center gap-3 text-[#64748bFF] job-card-type-and-salary">
               <span class="text-[14px]">Los Angeles, CA</span>
               <span class="text-[14px]">•</span>
               <span class="text-[14px]">Part-time</span>
@@ -177,23 +177,23 @@
             </p>
 
             <div class="">
-              <span class="text-[#002c5cFF] bg-[#eef4ff] font-semibold px-3 py-2 border text-[14px]">
+              <span class="text-[#002c5cFF] bg-[#eef4ff] font-semibold px-3 py-2 border text-[14px] not-applied-job-card-status">
                 Not Applied
               </span>
             </div>
 
-            <p class="text-[14px] text-[#323b49FF]">
+            <p class="text-[14px] text-[#323b49FF] job-card-describtion">
               Create stunning web experiences for high-profile clients. Must have portfolio and experience with modern web design trends.
             </p>
 
-            <div class="flex gap-2">
+           <div class="flex gap-2">
               <button
-                class="btn border border-[#10b981FF] font-semibold text-[#10b981FF]"
+                class="btn INTERVIEW-btn border border-[#10b981FF] font-semibold text-[#10b981FF] job-card-interview-btn"
               >
                 INTERVIEW
               </button>
               <button
-                class="btn border border-[#ef4444FF] font-semibold text-[#ef4444FF]"
+                class="btn border REJECTED-btn border-[#ef4444FF] font-semibold text-[#ef4444FF] job-card-rejected-btn"
               >
                 REJECTED
               </button>
@@ -202,7 +202,7 @@
 
           <!-- card deleate icon part -->
           <div id="card-deleate-icon-part">
-            <button class="btn">
+            <button class="btn job-card-deleate-btn">
               <i class="fa-solid fa-trash-can"></i>
             </button>
           </div>
@@ -212,12 +212,12 @@
           <!-- card text part -->
           <div id="text-part" class="space-y-5">
             <div>
-              <h3 class="text-[#002c5cFF] text-[18px] font-medium">
+              <h3 class="text-[#002c5cFF] text-[18px] font-medium job-card-title">
                 DataViz Solutions
               </h3>
-              <p class="text-[#64748bFF]">Data Visualization Specialist</p>
+              <p class="text-[#64748bFF] job-card-subtitle">Data Visualization Specialist</p>
             </div>
-            <p class="flex items-center gap-3 text-[#64748bFF]">
+            <p class="flex items-center gap-3 text-[#64748bFF] job-card-type-and-salary">
               <span class="text-[14px]">Boston, MA</span>
               <span class="text-[14px]">•</span>
               <span class="text-[14px]">Full-time</span>
@@ -226,23 +226,23 @@
             </p>
 
              <div class="">
-              <span class="text-[#002c5cFF] bg-[#eef4ff] font-semibold px-3 py-2 border text-[14px]">
+              <span class="text-[#002c5cFF] bg-[#eef4ff] font-semibold px-3 py-2 border text-[14px] not-applied-job-card-status">
                 Not Applied
               </span>
             </div>
 
-            <p class="text-[14px] text-[#323b49FF]">
+            <p class="text-[14px] text-[#323b49FF] job-card-describtion">
               Transform complex data into compelling visualizations. Required skills: D3.js, React, and strong analytical thinking.
             </p>
 
-            <div class="flex gap-2">
+             <div class="flex gap-2">
               <button
-                class="btn border border-[#10b981FF] font-semibold text-[#10b981FF]"
+                class="btn INTERVIEW-btn border border-[#10b981FF] font-semibold text-[#10b981FF] job-card-interview-btn"
               >
                 INTERVIEW
               </button>
               <button
-                class="btn border border-[#ef4444FF] font-semibold text-[#ef4444FF]"
+                class="btn border REJECTED-btn border-[#ef4444FF] font-semibold text-[#ef4444FF] job-card-rejected-btn"
               >
                 REJECTED
               </button>
@@ -251,7 +251,7 @@
 
           <!-- card deleate icon part -->
           <div id="card-deleate-icon-part">
-            <button class="btn">
+            <button class="btn job-card-deleate-btn">
               <i class="fa-solid fa-trash-can"></i>
             </button>
           </div>
@@ -261,12 +261,12 @@
           <!-- card text part -->
           <div id="text-part" class="space-y-5">
             <div>
-              <h3 class="text-[#002c5cFF] text-[18px] font-medium">
+              <h3 class="text-[#002c5cFF] text-[18px] font-medium job-card-title">
                 CloudFirst Inc
               </h3>
-              <p class="text-[#64748bFF]">Backend Developer</p>
+              <p class="text-[#64748bFF] job-card-subtitle">Backend Developer</p>
             </div>
-            <p class="flex items-center gap-3 text-[#64748bFF]">
+            <p class="flex items-center gap-3 text-[#64748bFF] job-card-type-and-salary">
               <span class="text-[14px]">Seattle, WA</span>
               <span class="text-[14px]">•</span>
               <span class="text-[14px]">Full-time</span>
@@ -275,23 +275,23 @@
             </p>
 
              <div class="">
-              <span class="text-[#002c5cFF] bg-[#eef4ff] font-semibold px-3 py-2 border text-[14px]">
+              <span class="text-[#002c5cFF] bg-[#eef4ff] font-semibold px-3 py-2 border text-[14px] not-applied-job-card-status">
                 Not Applied
               </span>
             </div>
 
-            <p class="text-[14px] text-[#323b49FF]">
+            <p class="text-[14px] text-[#323b49FF] job-card-describtion">
               Design and maintain scalable backend systems using Python and AWS. Work with modern DevOps practices and cloud infrastructure.
             </p>
 
-            <div class="flex gap-2">
+             <div class="flex gap-2">
               <button
-                class="btn border border-[#10b981FF] font-semibold text-[#10b981FF]"
+                class="btn INTERVIEW-btn border border-[#10b981FF] font-semibold text-[#10b981FF] job-card-interview-btn"
               >
                 INTERVIEW
               </button>
               <button
-                class="btn border border-[#ef4444FF] font-semibold text-[#ef4444FF]"
+                class="btn border REJECTED-btn border-[#ef4444FF] font-semibold text-[#ef4444FF] job-card-rejected-btn"
               >
                 REJECTED
               </button>
@@ -300,7 +300,7 @@
 
           <!-- card deleate icon part -->
           <div id="card-deleate-icon-part">
-            <button class="btn">
+            <button class="btn job-card-deleate-btn">
               <i class="fa-solid fa-trash-can"></i>
             </button>
           </div>
@@ -310,12 +310,12 @@
           <!-- card text part -->
           <div id="text-part" class="space-y-5">
             <div>
-              <h3 class="text-[#002c5cFF] text-[18px] font-medium">
+              <h3 class="text-[#002c5cFF] text-[18px] font-medium job-card-title">
                 Innovation Labs
               </h3>
-              <p class="text-[#64748bFF]">UI/UX Engineer</p>
+              <p class="text-[#64748bFF] job-card-subtitle">UI/UX Engineer</p>
             </div>
-            <p class="flex items-center gap-3 text-[#64748bFF]">
+            <p class="flex items-center gap-3 text-[#64748bFF] job-card-type-and-salary">
               <span class="text-[14px]">Austin, TX</span>
               <span class="text-[14px]">•</span>
               <span class="text-[14px]">Full-time</span>
@@ -324,23 +324,23 @@
             </p>
 
              <div class="">
-              <span class="text-[#002c5cFF] bg-[#eef4ff] font-semibold px-3 py-2 border text-[14px]">
+              <span class="text-[#002c5cFF] bg-[#eef4ff] font-semibold px-3 py-2 border text-[14px] not-applied-job-card-status">
                 Not Applied
               </span>
             </div>
 
-            <p class="text-[14px] text-[#323b49FF]">
+            <p class="text-[14px] text-[#323b49FF] job-card-describtion">
               Create beautiful and functional user interfaces for our suite of products. Strong design skills and frontend development expertise required.
             </p>
 
-            <div class="flex gap-2">
+          <div class="flex gap-2">
               <button
-                class="btn border border-[#10b981FF] font-semibold text-[#10b981FF]"
+                class="btn INTERVIEW-btn border border-[#10b981FF] font-semibold text-[#10b981FF] job-card-interview-btn"
               >
                 INTERVIEW
               </button>
               <button
-                class="btn border border-[#ef4444FF] font-semibold text-[#ef4444FF]"
+                class="btn border REJECTED-btn border-[#ef4444FF] font-semibold text-[#ef4444FF] job-card-rejected-btn"
               >
                 REJECTED
               </button>
@@ -349,7 +349,7 @@
 
           <!-- card deleate icon part -->
           <div id="card-deleate-icon-part">
-            <button class="btn">
+            <button class="btn job-card-deleate-btn">
               <i class="fa-solid fa-trash-can"></i>
             </button>
           </div>
@@ -359,12 +359,12 @@
           <!-- card text part -->
           <div id="text-part" class="space-y-5">
             <div>
-              <h3 class="text-[#002c5cFF] text-[18px] font-medium">
+              <h3 class="text-[#002c5cFF] text-[18px] font-medium job-card-title">
                 MegaCorp Solutions
               </h3>
-              <p class="text-[#64748bFF]">JavaScript Developer</p>
+              <p class="text-[#64748bFF] job-card-subtitle">JavaScript Developer</p>
             </div>
-            <p class="flex items-center gap-3 text-[#64748bFF]">
+            <p class="flex items-center gap-3 text-[#64748bFF] job-card-type-and-salary">
               <span class="text-[14px]">New York, NY</span>
               <span class="text-[14px]">•</span>
               <span class="text-[14px]">Full-time</span>
@@ -374,23 +374,23 @@
             </p>
 
             <div class="">
-              <span class="text-[#002c5cFF] bg-[#eef4ff] font-semibold px-3 py-2 border text-[14px]">
+              <span class="text-[#002c5cFF] bg-[#eef4ff] font-semibold px-3 py-2 border text-[14px] not-applied-job-card-status">
                 Not Applied
               </span>
             </div>
 
-            <p class="text-[14px] text-[#323b49FF]">
+            <p class="text-[14px] text-[#323b49FF] job-card-describtion">
               Build enterprise applications with JavaScript and modern frameworks. We offer competitive compensation, health insurance, and professional development opportunities.
             </p>
 
             <div class="flex gap-2">
               <button
-                class="btn border border-[#10b981FF] font-semibold text-[#10b981FF]"
+                class="btn INTERVIEW-btn border border-[#10b981FF] font-semibold text-[#10b981FF] job-card-interview-btn"
               >
                 INTERVIEW
               </button>
               <button
-                class="btn border border-[#ef4444FF] font-semibold text-[#ef4444FF]"
+                class="btn border REJECTED-btn border-[#ef4444FF] font-semibold text-[#ef4444FF] job-card-rejected-btn"
               >
                 REJECTED
               </button>
@@ -399,7 +399,7 @@
 
           <!-- card deleate icon part -->
           <div id="card-deleate-icon-part">
-            <button class="btn">
+            <button class="btn job-card-deleate-btn">
               <i class="fa-solid fa-trash-can"></i>
             </button>
           </div>
@@ -409,12 +409,12 @@
           <!-- card text part -->
           <div id="text-part" class="space-y-5">
             <div>
-              <h3 class="text-[#002c5cFF] text-[18px] font-medium">
+              <h3 class="text-[#002c5cFF] text-[18px] font-medium job-card-title">
                 StartupXYZ
               </h3>
-              <p class="text-[#64748bFF]">Full Stack Engineer</p>
+              <p class="text-[#64748bFF job-card-subtitle]">Full Stack Engineer</p>
             </div>
-            <p class="flex items-center gap-3 text-[#64748bFF]">
+            <p class="flex items-center gap-3 text-[#64748bFF] job-card-type-and-salary">
               <span class="text-[14px]">Remote</span>
               <span class="text-[14px]">•</span>
               <span class="text-[14px]">Full-time</span>
@@ -423,23 +423,23 @@
             </p>
 
             <div class="">
-              <span class="text-[#002c5cFF] bg-[#eef4ff] font-semibold px-3 py-2 border text-[14px]">
+              <span class="text-[#002c5cFF] bg-[#eef4ff] font-semibold px-3 py-2 border text-[14px] not-applied-job-card-status">
                 Not Applied
               </span>
             </div>
 
-            <p class="text-[14px] text-[#323b49FF]">
+            <p class="text-[14px] text-[#323b49FF] job-card-describtion">
               Join our fast-growing startup and work on our core platform. Experience with Node.js and React required. Great benefits and equity package included.
             </p>
 
-            <div class="flex gap-2">
+             <div class="flex gap-2">
               <button
-                class="btn border border-[#10b981FF] font-semibold text-[#10b981FF]"
+                class="btn INTERVIEW-btn border border-[#10b981FF] font-semibold text-[#10b981FF] job-card-interview-btn"
               >
                 INTERVIEW
               </button>
               <button
-                class="btn border border-[#ef4444FF] font-semibold text-[#ef4444FF]"
+                class="btn border REJECTED-btn border-[#ef4444FF] font-semibold text-[#ef4444FF] job-card-rejected-btn"
               >
                 REJECTED
               </button>
@@ -448,7 +448,7 @@
 
           <!-- card deleate icon part -->
           <div id="card-deleate-icon-part">
-            <button class="btn">
+            <button class="btn job-card-deleate-btn">
               <i class="fa-solid fa-trash-can"></i>
             </button>
           </div>
@@ -458,12 +458,12 @@
           <!-- card text part -->
           <div id="text-part" class="space-y-5">
             <div>
-              <h3 class="text-[#002c5cFF] text-[18px] font-medium">
+              <h3 class="text-[#002c5cFF] text-[18px] font-medium job-card-title">
                 TechCorp Industries
               </h3>
-              <p class="text-[#64748bFF]">Senior Frontend Developer</p>
+              <p class="text-[#64748bFF] job-card-subtitle">Senior Frontend Developer</p>
             </div>
-            <p class="flex items-center gap-3 text-[#64748bFF]">
+            <p class="flex items-center gap-3 text-[#64748bFF] job-card-type-and-salary">
               <span class="text-[14px]">San Francisco, CA</span>
               <span class="text-[14px]">•</span>
               <span class="text-[14px]">Full-time</span>
@@ -472,23 +472,23 @@
             </p>
 
             <div class="">
-              <span class="text-[#002c5cFF] bg-[#eef4ff] font-semibold px-3 py-2 border text-[14px]">
+              <span class="text-[#002c5cFF] bg-[#eef4ff] font-semibold px-3 py-2 border text-[14px] not-applied-job-card-status">
                 Not Applied
               </span>
             </div>
 
-            <p class="text-[14px] text-[#323b49FF]">
+            <p class="text-[14px] text-[#323b49FF] job-card-describtion">
               We are looking for an experienced Frontend Developer to build scalable web applications using React and TypeScript. You will work with a talented team on cutting-edge projects.
             </p>
 
-            <div class="flex gap-2">
+             <div class="flex gap-2">
               <button
-                class="btn border border-[#10b981FF] font-semibold text-[#10b981FF]"
+                class="btn INTERVIEW-btn border border-[#10b981FF] font-semibold text-[#10b981FF] job-card-interview-btn"
               >
                 INTERVIEW
               </button>
               <button
-                class="btn border border-[#ef4444FF] font-semibold text-[#ef4444FF]"
+                class="btn border REJECTED-btn border-[#ef4444FF] font-semibold text-[#ef4444FF] job-card-rejected-btn"
               >
                 REJECTED
               </button>
@@ -497,7 +497,7 @@
 
           <!-- card deleate icon part -->
           <div id="card-deleate-icon-part">
-            <button class="btn">
+            <button class="btn job-card-deleate-btn">
               <i class="fa-solid fa-trash-can"></i>
             </button>
           </div>
