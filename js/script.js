@@ -9,8 +9,7 @@ let interviewCountNumber = document.querySelector(".interview-count-number");
 let rejectedinterviewCountNumber = document.querySelector(
     ".rejected-count-number",
 );
-interviewCountNumber.innerText = interviewArry.length;
-rejectedinterviewCountNumber.innerText = rejectedArry.length;
+
 
 // job count number in available job section
 
@@ -97,10 +96,33 @@ document.querySelector("main").addEventListener("click", function (e) {
             jobCardTypeAndSalaryText,
             notAppliedJobCardStatusText,
             jobCardDescribtionText,
-            jobCardInterviewBtnText,
+            jobCardInterviewBtnText : "Interview",
             jobCardRejectedBtnText
         }
-        console.log(jobCardDetailsObj)
+        
+        // add card details object in interviewArry
+
+       let findObj =  interviewArry.find(item => item.jobCardTitleText === jobCardDetailsObj.jobCardTitleText)
+        // interviewArry.push(jobCardDetailsObj);
+        if(!findObj) {
+            interviewArry.push(jobCardDetailsObj);
+        }
+        interviewCountNumber.innerText = interviewArry.length;
+        // not applied job card parent add interview
+        let notAppliedJobCardParent = parentNode.querySelector(".not-applied-job-card-parent")
+
+        notAppliedJobCardParent.innerHTML = `
+        
+           <span class="text-[#002c5cFF] bg-[#eef4ff] font-semibold px-3 py-2 border text-[14px] not-applied-job-card-status">
+                     Interview
+              </span>
+        
+        `
+
     }
 
+   
+
 });
+
+ 
