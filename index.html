@@ -87,20 +87,20 @@
         class="my-4 md:my-6 flex items-center gap-2"
       >
         <!-- Number 1 Btn (All) -->
-        <button id="all-filter-btn" class="btn filter-btn btn-primary px-6">
+        <button onclick="changePageAndColorBtn('all-filter-btn')" id="all-filter-btn" class="btn filter-btn btn-primary px-6">
           All
         </button>
         <!-- Number 2 Btn (Interview) -->
-        <button
+        <button onclick="changePageAndColorBtn('interview-filter-btn')"
           id="interview-filter-btn"
-          class="btn filter-btn btn-primary px-6"
+          class="btn filter-btn  px-6"
         >
           Interview
         </button>
         <!-- Number 3 Btn (Rejected) -->
-        <button
+        <button onclick="changePageAndColorBtn('rejected-filter-btn')"
           id="rejected-filter-btn"
-          class="btn filter-btn btn-primary px-6"
+          class="btn filter-btn  px-6"
         >
           Rejected
         </button>
@@ -506,7 +506,7 @@
 
 
       <!-- interview section -->
-       <section id="interview-section-parent">
+       <section id="interview-section-parent" class="">
         <!-- No jobs available and image part -->
                 <div class="border px-10 py-20  mt-5 my-16 flex flex-col justify-center items-center">
                       <div>
@@ -522,7 +522,7 @@
        </section>
 
       <!-- rejected section -->
-       <section id="rejected-section-parent">
+       <section id="rejected-section-parent" class="">
         <!-- No jobs available and image part -->
                 <div class="border px-10 py-20  mt-5 my-16 flex flex-col justify-center items-center">
                       <div>
@@ -539,5 +539,6 @@
     </main>
 
     <script src="./js/script.js"></script>
+    <script src="./js/filter-btn.js"></script>
   </body>
 </html>
