@@ -121,6 +121,58 @@ document.querySelector("main").addEventListener("click", function (e) {
         `
         addElemetsToInterViewPart(interviewArry)
     }
+    else if (e.target.matches('.job-card-rejected-btn')) {
+        let parentNode = e.target.parentNode.parentNode;
+        //    job card element details
+        let jobCardTitle = parentNode.querySelector(".job-card-title");
+        let jobCardSubtitle = parentNode.querySelector(".job-card-subtitle");
+        let jobCardTypeAndSalary = parentNode.querySelector(".job-card-type-and-salary",);
+        let notAppliedJobCardStatus = parentNode.querySelector(".not-applied-job-card-status",);
+        let jobCardDescribtion = parentNode.querySelector(".job-card-describtion");
+        let jobCardInterviewBtn = parentNode.querySelector(".job-card-interview-btn");
+        let jobCardRejectedBtn = parentNode.querySelector(".job-card-rejected-btn");
+
+        //   job card element text details
+        let jobCardTitleText = jobCardTitle.innerText;
+        let jobCardSubtitleText = jobCardSubtitle.innerText;
+        let jobCardTypeAndSalaryText = jobCardTypeAndSalary.innerText;
+        let notAppliedJobCardStatusText = notAppliedJobCardStatus.innerText;
+        let jobCardDescribtionText = jobCardDescribtion.innerText;
+        let jobCardInterviewBtnText = jobCardInterviewBtn.innerText;
+        let jobCardRejectedBtnText = jobCardRejectedBtn.innerText;
+
+        //  job card element text details covert to object
+        let jobCardDetailsObj = {
+            jobCardTitleText,
+            jobCardSubtitleText,
+            jobCardTypeAndSalaryText,
+            notAppliedJobCardStatusText: "Rejected",
+            jobCardDescribtionText,
+            jobCardInterviewBtnText,
+            jobCardRejectedBtnText
+        }
+
+        // add card details object in interviewArry
+
+        let findObj = rejectedArry.find(item => item.jobCardTitleText === jobCardDetailsObj.jobCardTitleText)
+        // interviewArry.push(jobCardDetailsObj);
+        if (!findObj) {
+            rejectedArry.push(jobCardDetailsObj);
+        }
+        
+        rejectedinterviewCountNumber.innerText = rejectedArry.length;
+        // not applied job card parent add interview
+        let notAppliedJobCardParent = parentNode.querySelector(".not-applied-job-card-parent")
+
+        notAppliedJobCardParent.innerHTML = `
+        
+           <span class="text-[red] border-[red] font-semibold px-3 py-2 border text-[14px] not-applied-job-card-status">
+                     ${jobCardDetailsObj.notAppliedJobCardStatusText}
+              </span>
+        
+        `
+        addElemetsToRejectPart(rejectedArry)
+    }
 
 
 
@@ -134,7 +186,7 @@ let jobsCardAddingInterviewSectionPart = document.querySelector('#jobs-card-addi
 
 
 function addElemetsToInterViewPart(interviewArry) {
-   console.log(interviewArry)
+   
     if (interviewArry.length === 0) {
         document.getElementById("No-jobs-available-and-image-part").style.display = "flex";
     }
@@ -194,6 +246,77 @@ function addElemetsToInterViewPart(interviewArry) {
                jobsCardAddingInterviewSectionPart.appendChild(createJobsCardDivInInterViewSection)
         }
     }
+
+}
+// jobs card adding reject section part
+
+let jobsCardAddingRejectSectionPart = document.querySelector('#jobs-card-adding-reject-section-part');
+
+
+
+function addElemetsToRejectPart(rejectedArry) {
+    
+    if (rejectedArry.length === 0) {
+        document.querySelector(".No-jobs-available-and-image-reject-part").style.display = "flex";
+    }
+    else {
+        document.querySelector(".No-jobs-available-and-image-reject-part").style.display = "none";
+        jobsCardAddingRejectSectionPart.innerHTML = '';
+        for (let rejecteItems of rejectedArry) {
+             
+            // create jobs card adding reject section child div
+            let createJobsCardDivRejectSection = document.createElement('div');
+            createJobsCardDivRejectSection.classList.add("border", "p-5", "flex", "justify-between");
+            createJobsCardDivRejectSection.innerHTML = `
+                     <!-- card text part -->
+          <div class="space-y-5">
+            <div>
+              <h3 class="text-[#002c5cFF] text-[18px] font-medium job-card-title">
+                ${rejecteItems.jobCardTitleText}
+              </h3>
+              <p class="text-[#64748bFF] job-card-subtitle">${rejecteItems.jobCardTitleText}</p>
+            </div>
+            <p class="flex items-center gap-3 text-[#64748bFF] job-card-type-and-salary">
+              ${rejecteItems.jobCardTypeAndSalaryText}
+            </p>
+
+             <div class="not-applied-job-card-parent">
+              <span class="text-[#002c5cFF] bg-[#eef4ff] font-semibold px-3 py-2 border text-[14px] not-applied-job-card-status">
+                   ${rejecteItems.notAppliedJobCardStatusText}
+              </span>
+            </div>
+
+            <p class="text-[14px] text-[#323b49FF] job-card-describtion">
+              ${rejecteItems.jobCardDescribtionText}
+            </p>
+
+             <div class="flex gap-2">
+              <button
+                class="btn INTERVIEW-btn border border-[#10b981FF] font-semibold text-[#10b981FF] job-card-interview-btn"
+              >
+                INTERVIEW
+              </button>
+              <button
+                class="btn border REJECTED-btn border-[#ef4444FF] font-semibold text-[#ef4444FF] job-card-rejected-btn"
+              >
+                REJECTED
+              </button>
+            </div>
+          </div>
+
+          <!-- card deleate icon part -->
+          <div id="card-deleate-icon-part">
+            <button class="btn job-card-deleate-btn">
+              <i class="fa-solid fa-trash-can"></i>
+            </button>
+          </div>
+               `
+           
+               jobsCardAddingRejectSectionPart.appendChild(createJobsCardDivRejectSection);
+        }
+    }
+
+    
 
 }
 
