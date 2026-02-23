@@ -94,35 +94,111 @@ document.querySelector("main").addEventListener("click", function (e) {
             jobCardTitleText,
             jobCardSubtitleText,
             jobCardTypeAndSalaryText,
-            notAppliedJobCardStatusText,
+            notAppliedJobCardStatusText: "Interview",
             jobCardDescribtionText,
-            jobCardInterviewBtnText : "Interview",
+            jobCardInterviewBtnText,
             jobCardRejectedBtnText
         }
-        
+
         // add card details object in interviewArry
 
-       let findObj =  interviewArry.find(item => item.jobCardTitleText === jobCardDetailsObj.jobCardTitleText)
+        let findObj = interviewArry.find(item => item.jobCardTitleText === jobCardDetailsObj.jobCardTitleText)
         // interviewArry.push(jobCardDetailsObj);
-        if(!findObj) {
+        if (!findObj) {
             interviewArry.push(jobCardDetailsObj);
         }
+        
         interviewCountNumber.innerText = interviewArry.length;
         // not applied job card parent add interview
         let notAppliedJobCardParent = parentNode.querySelector(".not-applied-job-card-parent")
 
         notAppliedJobCardParent.innerHTML = `
         
-           <span class="text-[#002c5cFF] bg-[#eef4ff] font-semibold px-3 py-2 border text-[14px] not-applied-job-card-status">
-                     Interview
+           <span class="text-[green] border-[green] font-semibold px-3 py-2 border text-[14px] not-applied-job-card-status">
+                     ${jobCardDetailsObj.notAppliedJobCardStatusText}
               </span>
         
         `
-
+        addElemetsToInterViewPart(interviewArry)
     }
 
-   
+
 
 });
 
- 
+
+// jobs card adding interview section part
+
+let jobsCardAddingInterviewSectionPart = document.querySelector('#jobs-card-adding-interview-section-part');
+
+
+
+function addElemetsToInterViewPart(interviewArry) {
+   console.log(interviewArry)
+    if (interviewArry.length === 0) {
+        document.getElementById("No-jobs-available-and-image-part").style.display = "flex";
+    }
+    else{
+        document.getElementById("No-jobs-available-and-image-part").style.display = "none";
+        jobsCardAddingInterviewSectionPart.innerHTML = ''
+        for (let interviewItem of interviewArry) {
+             
+            // create jobs card adding interview section child div
+            let createJobsCardDivInInterViewSection = document.createElement('div');
+            createJobsCardDivInInterViewSection.classList.add("border", "p-5", "flex", "justify-between");
+            createJobsCardDivInInterViewSection.innerHTML = `
+                     <!-- card text part -->
+          <div class="space-y-5">
+            <div>
+              <h3 class="text-[#002c5cFF] text-[18px] font-medium job-card-title">
+                ${interviewItem.jobCardTitleText}
+              </h3>
+              <p class="text-[#64748bFF] job-card-subtitle">${interviewItem.jobCardTitleText}</p>
+            </div>
+            <p class="flex items-center gap-3 text-[#64748bFF] job-card-type-and-salary">
+              ${interviewItem.jobCardTypeAndSalaryText}
+            </p>
+
+             <div class="not-applied-job-card-parent">
+              <span class="text-[#002c5cFF] bg-[#eef4ff] font-semibold px-3 py-2 border text-[14px] not-applied-job-card-status">
+                   ${interviewItem.notAppliedJobCardStatusText}
+              </span>
+            </div>
+
+            <p class="text-[14px] text-[#323b49FF] job-card-describtion">
+              ${interviewItem.jobCardDescribtionText}
+            </p>
+
+             <div class="flex gap-2">
+              <button
+                class="btn INTERVIEW-btn border border-[#10b981FF] font-semibold text-[#10b981FF] job-card-interview-btn"
+              >
+                INTERVIEW
+              </button>
+              <button
+                class="btn border REJECTED-btn border-[#ef4444FF] font-semibold text-[#ef4444FF] job-card-rejected-btn"
+              >
+                REJECTED
+              </button>
+            </div>
+          </div>
+
+          <!-- card deleate icon part -->
+          <div id="card-deleate-icon-part">
+            <button class="btn job-card-deleate-btn">
+              <i class="fa-solid fa-trash-can"></i>
+            </button>
+          </div>
+               `
+           
+               jobsCardAddingInterviewSectionPart.appendChild(createJobsCardDivInInterViewSection)
+        }
+    }
+
+}
+
+
+
+
+
+
