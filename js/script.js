@@ -64,6 +64,9 @@ function changePageAndColorBtn(id) {
     }
 }
 
+
+
+
 // filter btn logic end
 
 // add clcik handler in main parent
@@ -107,11 +110,17 @@ document.querySelector("main").addEventListener("click", function (e) {
         if (!findObj) {
             interviewArry.push(jobCardDetailsObj);
         }
+
+         rejectedArry = rejectedArry.filter(item => item.jobCardTitleText != jobCardDetailsObj.jobCardTitleText);
+         rejectedinterviewCountNumber.innerText = rejectedArry.length;
         
         interviewCountNumber.innerText = interviewArry.length;
+
+           addElemetsToInterViewPart(interviewArry);
+           addElemetsToRejectPart(rejectedArry);
         // not applied job card parent add interview
         let notAppliedJobCardParent = parentNode.querySelector(".not-applied-job-card-parent")
-
+          
         notAppliedJobCardParent.innerHTML = `
         
            <span class="text-[green] border-[green] font-semibold px-3 py-2 border text-[14px] not-applied-job-card-status">
@@ -119,7 +128,6 @@ document.querySelector("main").addEventListener("click", function (e) {
               </span>
         
         `
-        addElemetsToInterViewPart(interviewArry)
     }
     else if (e.target.matches('.job-card-rejected-btn')) {
         let parentNode = e.target.parentNode.parentNode;
@@ -159,8 +167,17 @@ document.querySelector("main").addEventListener("click", function (e) {
         if (!findObj) {
             rejectedArry.push(jobCardDetailsObj);
         }
-        
+
+        interviewArry = interviewArry.filter(item => item.jobCardTitleText != jobCardDetailsObj.jobCardTitleText)
+        interviewCountNumber.innerText = interviewArry.length;
+
         rejectedinterviewCountNumber.innerText = rejectedArry.length;
+
+        addElemetsToInterViewPart(interviewArry);
+         addElemetsToRejectPart(rejectedArry);
+       
+        
+        
         // not applied job card parent add interview
         let notAppliedJobCardParent = parentNode.querySelector(".not-applied-job-card-parent")
 
@@ -171,7 +188,6 @@ document.querySelector("main").addEventListener("click", function (e) {
               </span>
         
         `
-        addElemetsToRejectPart(rejectedArry)
     }
 
 
@@ -189,6 +205,7 @@ function addElemetsToInterViewPart(interviewArry) {
    
     if (interviewArry.length === 0) {
         document.getElementById("No-jobs-available-and-image-part").style.display = "flex";
+        jobsCardAddingInterviewSectionPart.innerHTML = ''; 
     }
     else{
         document.getElementById("No-jobs-available-and-image-part").style.display = "none";
@@ -258,6 +275,7 @@ function addElemetsToRejectPart(rejectedArry) {
     
     if (rejectedArry.length === 0) {
         document.querySelector(".No-jobs-available-and-image-reject-part").style.display = "flex";
+        jobsCardAddingRejectSectionPart.innerHTML = '';
     }
     else {
         document.querySelector(".No-jobs-available-and-image-reject-part").style.display = "none";
@@ -281,7 +299,7 @@ function addElemetsToRejectPart(rejectedArry) {
             </p>
 
              <div class="not-applied-job-card-parent">
-              <span class="text-[#002c5cFF] bg-[#eef4ff] font-semibold px-3 py-2 border text-[14px] not-applied-job-card-status">
+              <span class="text-[red] bg-[#9d040444] font-semibold px-3 py-2 border text-[14px] not-applied-job-card-status">
                    ${rejecteItems.notAppliedJobCardStatusText}
               </span>
             </div>
