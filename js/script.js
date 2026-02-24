@@ -16,6 +16,10 @@ let rejectedinterviewCountNumber = document.querySelector(
 let jobCountNumber = document.querySelector(".job-count-number");
 jobCountNumber.innerText = jobCardsChildrensArry.length;
 
+let interviewJobCount = document.querySelector(".job-count-number-interview");
+let rejectJobCount = document.querySelector(".job-count-number-reject");
+
+
 // job tracker 3 cards main part
 
 // card (Total) 1
